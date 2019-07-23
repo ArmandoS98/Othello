@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.tecnologiatransaccional.othello.Adaptador.ViewAdapter;
+import com.tecnologiatransaccional.othello.Pojos.Board;
 import com.tecnologiatransaccional.othello.Pojos.Indices;
 import com.tecnologiatransaccional.othello.Validaciones.Validaciones;
 import com.tecnologiatransaccional.othello.interfaces.TableroPOS;
@@ -17,6 +18,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements TableroPOS {
     private static final String TAG = "MainActivity";
+
+    private Board b = new Board();
 
     private TextView mTextViewJugador;
     RecyclerView recyclerView;

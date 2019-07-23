@@ -7,10 +7,10 @@ import java.util.ArrayList;
 public class Validaciones {
 
     public Validaciones(ArrayList<Indices> arrayList, int pos, int fila, int columna, boolean turnoJugador) {
-        analizarHorizontalAtras(arrayList, pos, fila, columna, turnoJugador);
+        analizarHorizontalAtras(arrayList, pos, turnoJugador);
     }
 
-    private void analizarHorizontalAtras(ArrayList<Indices> arrayList, int pos, int fila, int columna, boolean turnoJugador) {
+    private void analizarHorizontalAtras(ArrayList<Indices> arrayList, int pos, boolean turnoJugador) {
         boolean convertir = false;
         int i = arrayList.get(pos).getColumna() - 1;
         int cal = pos - 1;
@@ -42,11 +42,11 @@ public class Validaciones {
                 }
         }
 
-        analizarHorizontalAdelante(arrayList, pos, fila, columna, turnoJugador);
+        analizarHorizontalAdelante(arrayList, pos, turnoJugador);
     }
 
 
-    private void analizarHorizontalAdelante(ArrayList<Indices> arrayList, int pos, int fila, int columna, boolean turnoJugador) {
+    private void analizarHorizontalAdelante(ArrayList<Indices> arrayList, int pos, boolean turnoJugador) {
         boolean convertir = false;
         int i = arrayList.get(pos).getColumna() + 1;
         int cal = pos + 1;
